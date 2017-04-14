@@ -7,8 +7,8 @@ Don't like Mango, or it does not suit your needs? Just forget about it, and use 
 
 **Warning:** Avoid having installed and configured for USB DAC playback more than one application at a time! They tend to autolaunch on a device attached, and you'll have a mess, that may lead to conflicting system volume settings, that may damage your ears or headphones!
 
-**Q**: Is it safe to run DX200 in this mode?
+**Q**: Is it safe to run DX200 in this mode?  
 **A**: Actually, Mango on both DX80 and DX200 uses this mode to playback DSD. So, yes - it is safe!
 
-**Q**: Why XXX application is not compatible, but perfectly deals with truu externad USB DAC?
+**Q**: Why XXX application is not compatible, but perfectly deals with truu externad USB DAC?  
 **A**: I don't know the exact reason, but, most probably, this is due to misuse of the volume controls, which leads to damaged bit stream output to this USB DAC.
