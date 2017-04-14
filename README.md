@@ -1,5 +1,5 @@
 # DX200 USB Audio
-This application turns iBasso DX200 audio part into a USB DAC, accessible for Android applications. When it starts the USB DAC Interface, then any Android music player application that supports and is configured to use a USB DAC will play bit perfect audio, including DSD! For DSD, it supports both Native and DoP modes, and even DoP-encoded PCM formats, e.g. in flac.
+This application turns iBasso DX200 audio part into a USB DAC, accessible for Android applications? installed on this DX200 itself. When it starts the USB DAC Interface, then any Android music player application that supports and is configured to use a USB DAC will play bit perfect audio, including DSD! For DSD, it supports both Native and DoP modes, and even DoP-encoded PCM formats, e.g. in flac.
 
 **Please note:** such applications are not aware that the volume control of DX200 _is the volume control_ of the USB DAC they use! It may lead to distorted, or too loud sound! Look into the particular application setting to find a way to disable using volume control at all.
 
