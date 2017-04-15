@@ -7,11 +7,14 @@ Don't like Mango, or it does not suit your needs? Just forget about it, and use 
 
 **Warning:** Avoid having installed and configured for USB DAC playback more than one application at a time! They tend to autolaunch on a device attached, and you'll have a mess, that may lead to conflicting system volume settings, that may damage your ears or headphones!
 
-**Q**: Is it safe to run DX200 in this mode?  
+**Q**: Is it safe to run DX200 in this mode?<br />
 **A**: Actually, Mango on both DX80 and DX200 uses this mode to playback DSD. So, yes - it is safe!
 
 **Q**: Do I need a special/custom firmware build, or a root access, or anything else special?<br />
 **A**: No, it works with any stock firmware.
 
-**Q**: Why XXX application is not compatible, but perfectly deals with an external USB DAC?  
+**Q**: Why XXX application is not compatible, but perfectly deals with an external USB DAC?<br />
 **A**: I don't know the exact reason, but, most probably, this is due to misuse of the volume controls, which leads to damaged bit stream output to this USB DAC.
+
+**Q**: PCM formats sound OK, but with DSD I hear only a noise! What's wrong?<br />
+**A**: Check software volume control in your player application and be sure it is set to 100%.
