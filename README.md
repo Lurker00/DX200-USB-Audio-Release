@@ -10,5 +10,8 @@ Don't like Mango, or it does not suit your needs? Just forget about it, and use 
 **Q**: Is it safe to run DX200 in this mode?  
 **A**: Actually, Mango on both DX80 and DX200 uses this mode to playback DSD. So, yes - it is safe!
 
+**Q**: Do I need a special/custom firmware build, or a root access, or anything else special?<br />
+**A**: No, it works with any stock firmware.
+
 **Q**: Why XXX application is not compatible, but perfectly deals with an external USB DAC?  
 **A**: I don't know the exact reason, but, most probably, this is due to misuse of the volume controls, which leads to damaged bit stream output to this USB DAC.
