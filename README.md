@@ -7,6 +7,16 @@ Don't like Mango, or it does not suit your needs? Just forget about it, and use 
 
 **Warning:** Avoid having installed and configured for USB DAC playback more than one application at a time! They tend to autolaunch on a device attached, and you'll have a mess, that may lead to conflicting system volume settings, that may damage your ears or headphones!
 
+## History
+1.0.20 - initial release.<br />
+1.0.22:
+* _Exit_ button moved to 3-dots menu.
+* Optional _Acquire WakeLock_ to prevent interface shutdown in doze mode. **Note**: don't forget to stop interface when idle!
+* Optional _Autostart_ to start the interface without the need to push _Start_ button.
+
+The known problem of this version is that Android kills the application when it is the only application which holds wakelock for a long time.
+
+## FAQ
 **Q**: Is it safe to run DX200 in this mode?<br />
 **A**: Actually, Mango on both DX80 and DX200 uses this mode to playback DSD. So, yes - it is safe!
 
