@@ -8,7 +8,7 @@ Don't like Mango, or it does not suit your needs? Just forget about it, and use 
 **Warning:** Avoid having installed and configured for USB DAC playback more than one application at a time! They tend to autolaunch on a device attached, and you'll have a mess, that may lead to conflicting system volume settings, that may damage your ears or headphones!
 
 ## History
-**1.0.23** - The problem of 1.0.22 has been solved: with wakelock acquired, it is not killed until turned off manually, or while the battery lasts, whatever is sooner.
+**1.0.23** - The problem of 1.0.22 has been solved: with wakelock acquired, it is not killed, and stays until turned off manually, or while the battery lasts, whatever is sooner.
 
 **1.0.22**:
 * _Exit_ button moved to 3-dots menu. The options are in the menu as well.
