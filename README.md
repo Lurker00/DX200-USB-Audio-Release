@@ -7,7 +7,7 @@ Don't like Mango, or it does not suit your needs? Just forget about it, and use 
 
 **Warning:** Avoid having installed and configured for USB DAC playback more than one application at a time! They tend to autolaunch on a device attached, and you'll have a mess, that may lead to conflicting system volume settings, that may damage your ears or headphones!
 
-** Known problem: ** During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen on any other sample rate, including DSD.
+**Known problem:** During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen on any other sample rate, including DSD.
 
 ## History of public releases
 **1.0.29** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.2.110:
