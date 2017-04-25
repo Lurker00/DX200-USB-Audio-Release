@@ -11,19 +11,19 @@ Don't like Mango, or it does not suit your needs? Just forget about it, and use 
 
 ## History of public releases
 **1.0.30** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.2.110:
-* _Smart release of WakeLock_ menu setting added, with corresponding _Idle Timeout_ value.
+* ***Smart release of WakeLock*** menu setting added, with corresponding ***Idle Timeout*** value.
 With this (and _Acquire WakeLock_) setting turned on, the application tries to detect that no a known music player actually use the USB DAC, by checking wakelocks from other processes. If no a know wakelock found for the timeout period, the application releases its own wakelock, letting Android to enter doze mode.
-* _Battery saver_ menu option added, which turns on Android Battery Saver mode when the interface is active. It does not actually save much battery, because the main consumers are DAC and amp. But it does reduce background activity of Android and Google stuff.
-* _CPU Turbo Mode_ menu option added. Turn it on, if music can't be played when the display is turned off. For instance, playback of SACD ISO images encoded with DST requires a lot of CPU power. When display turns off, Android on DX200 stops 7 from 8 CPU cores. Turbo Mode keeps 3 additional cores (to 4 total) from stopping. If _Acquire WakeLock_ and _Smart Release_ are enabled, the cores are made available for stopping during smart release period. Turbo Mode is activated on application start, even if the interface is not started. This allows to use MangoPlayer in Turbo mode as well, but be careful: smart  release does not work when the interface is not started!
+* ***Battery saver*** menu option added, which turns on Android Battery Saver mode when the interface is active. It does not actually save much battery, because the main consumers are DAC and amp. But it does reduce background activity of Android and Google stuff.
+* ***CPU Turbo Mode*** menu option added. Turn it on, if music can't be played when the display is turned off. For instance, playback of SACD ISO images encoded with DST requires a lot of CPU power. When display turns off, Android on DX200 stops 7 from 8 CPU cores. Turbo Mode keeps 3 additional cores (to 4 total) from stopping. If _Acquire WakeLock_ and _Smart Release_ are enabled, the cores are made available for stopping during smart release period. Turbo Mode is activated on application start, even if the interface is not started. This allows to use MangoPlayer in Turbo mode as well, but be careful: smart  release does not work when the interface is not started!
 
 These features require either SuperSU installed, or permissions available only for pre-installed applications. This restriction makes no sense to make new versions for the stock firmware anymore.
 
 **1.0.23** - The problem of 1.0.22 has been solved: with wakelock acquired, it is not killed, and stays until turned off manually, or while the battery lasts, whatever is sooner.
 
 **1.0.22**:
-* _Exit_ button moved to 3-dots menu. The options are in the menu as well.
-* Optional _Acquire WakeLock_ to prevent interface shutdown in doze mode. **Note**: don't forget to stop interface when idle!
-* Optional _Autostart_ to start the interface without the need to push _Start_ button.
+* ***Exit*** button moved to 3-dots menu. The options are in the menu as well.
+* Optional ***Acquire WakeLock*** to prevent interface shutdown in doze mode. **Note**: don't forget to stop interface when idle!
+* Optional ***Autostart*** to start the interface without the need to push _Start_ button.
 The known problem of this version is that Android kills the application when it is the only application which holds wakelock for a long time.
 
 **1.0.20** - initial release.
