@@ -10,10 +10,11 @@ Don't like Mango, or it does not suit your needs? Just forget about it, and use 
 **Known problem:** During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen on any other sample rate, including DSD.
 
 ## History of public releases
-**1.0.29** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.2.110:
+**1.0.30** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.2.110:
 * _Smart release of WakeLock_ menu setting added, with corresponding _Idle Timeout_ value.
 With this (and _Acquire WakeLock_) setting turned on, the application tries to detect that no a known music player actually use the USB DAC, by checking wakelocks from other processes. If no a know wakelock found for the timeout period, the application releases its own wakelock, letting Android to enter doze mode.
 * _Battery saver_ menu option added, which turns on Android Battery Saver mode when the interface is active. It does not actually save much battery, because the main consumers are DAC and amp. But it does reduce background activity of Android and Google stuff.
+* _CPU Turbo Mode_ menu option added. Turn it on, if music can't be played when the display is turned off. For instance, playback of SACD ISO images encoded with DST requires a lot of CPU power. When display turns off, Android on DX200 stops 7 from 8 CPU cores. Turbo Mode keeps 3 additional cores (to 4 total) from stopping. If _Acquire WakeLock_ and _Smart Release_ are enabled, the cores are made available for stopping during smart release period. Turbo Mode is turned on on application start, even if the interface is not started. This allows to use MangoPlayer in Turbo mode as well, but be careful: smart  release does not work when the interface is not started!
 
 These features require either SuperSU installed, or permissions available only for pre-installed applications. This restriction makes no sense to make new versions for the stock firmware anymore.
 
