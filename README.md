@@ -10,10 +10,8 @@ Don't like Mango, or it does not suit your needs? Just forget about it, and use 
 **Known problem:** During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen on any other sample rate, including DSD.
 
 ## History of public releases
-**1.0.33** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.2.110 Rev.1:
+**1.0.35** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.2.110 Rev.1:
 * ***Active player*** - choose the music player application that you currently use most of time, even if you have only one USB Audio compatible player. If there are more than one recognized players, the application hides other players (they are still visible in Android Settings-Apps menu), and, on USB device attached event, grants access to the USB device without questions and launches the player chosen. This eliminates possible conflicts and simplifies the use. If you want all your players back, select *I'll control it myself!* and tap OK.
-* ***USB Mass Storage*** - once checked, starts a service that forces USB Mass Storage mode when DX200 is connected to a computer. This function does not require the application to be running: the service even survives device reboots. Uncheck it if you want MTP back again.<br />
-**Note:** it may take several seconds to safely unmount your SD card internally! Please keep patience.
 * ***Battery saver*** is improved: it stops 4 out of 8 CPU kernels, and stops Media Scanner.
 * The notification bar now contains information about current application state, displays number of detected wakelocks (right bottom corner, including its own wakelock), and idle time chronometer.
 * If the interface was detached due to doze mode, it is not restarted immediatelly once the screen is turned on: it waits for around 5 seconds before initiates restart. This allows to only take a look to the lock screen, or keeps the interface from unneeded restart in case a background service turns the display on for a moment.
