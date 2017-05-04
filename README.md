@@ -25,7 +25,7 @@ With this (and _Acquire WakeLock_) setting turned on, the application tries to d
 
 These features require either SuperSU installed, or permissions available only for pre-installed applications. This restriction makes no sense to make new versions for the stock firmware anymore.
 
-**1.0.23** - The problem of 1.0.22 has been solved: with wakelock acquired, it is not killed, and stays until turned off manually, or while the battery lasts, whatever is sooner.
+**1.0.23** - The problem of 1.0.22 has been solved: with wakelock acquired, it is not killed, and stays until turned off manually, or while the battery lasts, whatever is sooner. _This is the last release as a standalone application. All further versions are integrated into firmware mods._
 
 **1.0.22**:
 * ***Exit*** button moved to 3-dots menu. The options are in the menu as well.
