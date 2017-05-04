@@ -48,5 +48,5 @@ The known problem of this version is that Android kills the application when it 
 **Q**: PCM formats sound OK, but with DSD I hear only a noise! What's wrong?<br />
 **A**: Check software volume control in your player application and be sure it is set to 100%.
 
-**Q**: Where is my internal storage in USB Mass Storage mode? The second disk is not inserted!
+**Q**: Where is my internal storage in USB Mass Storage mode? The second disk is not inserted!<br />
 **A**: USB Mass Storage provides direct access to a real disk. The user visible internal storage is actually a folder of the internal disk (flash partition formatted with ext4). Though it is possible to export this whole partition, and ext4-aware OS (Linux) recognizes it, it has a little sense, because access rights keep the iternal storage directory out of reach anyway. Changing (accidentally or intentionally) these access rights will ruin DX200.
