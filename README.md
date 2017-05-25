@@ -3,6 +3,8 @@ This application switches iBasso DX200 audio processor (XMOS chip) into USB DAC 
 
 Don't like Mango, or it does not suit your needs? Just forget about it, and use USB Audio Player PRO, or Hiby Music, fully utilizing the great hardware of DX200! The startup screen of **USB Audio for DX200** has listed compatible applications, along with the required settings.
 
+Currently, there are 3 applications, fully compatible with USB Audio: free [HibyMusic](https://play.google.com/store/apps/details?id=com.hiby.music) (a special build is embedded into firmware 2.2.110 Rev.2), [USB Audio Player PRO](https://play.google.com/store/apps/details?id=com.extreamsd.usbaudioplayerpro), [Neutron Music](https://play.google.com/store/apps/details?id=com.neutroncode.mp). They cover almost, if not all, the file formats and sound sources around, and have rich functionality.
+
 **Please note:** When Mango plays DSD tracks, it switches XMOS chip into USB DAC mode. Avoid playing DSD in Mango in Android, if you have configured UAPP/Hiby/Neutron to auto-start when USB DAC is attached! They will fight for the access to USB DAC with Mango.
 
 **Warning:** Avoid having installed and configured for USB DAC playback more than one application at a time! They tend to autolaunch on a device attached, and you'll have a mess, that may lead to conflicting system volume settings, that may damage your ears or headphones! If you want more than one USB Audio compatible music player, use ***Active player*** feature to avoid problems.
@@ -10,6 +12,12 @@ Don't like Mango, or it does not suit your needs? Just forget about it, and use 
 **Known problem:** During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen with any other sample rate, including DSD. A workaround for 16/44.1 recordings is to use any player with playback via Android: it does not affect the quality.
 
 ## History of public releases
+**1.0.39** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.2.110 Rev.2:
+* USB Audio saves at reboot or power off, and restores ant boot up, the DX200-specific sound settings: digital filter, gain, auto-mute.
+* ***USB DAC*** menu item - turns DX200 into USB DAC mode.
+* Attempt to switch XMOS chip modes (start/stop interface, start/stop USB DAC) is not allowed when an S/PDIF cable is attached, and a warning message is displayed. This is due to a discovered problem, that the audio driver does not correctly switches modes with S/PDIF cable attached, down to device hang.
+* Minor bug fixes, notification display improved.
+
 **1.0.35** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.2.110 Rev.1:
 * ***Active player*** - choose the music player application that you currently use most of time, even if you have only one USB Audio compatible player. If there are more than one recognized players, the application hides other players (they are still visible in Android Settings-Apps menu), and, on USB device attached event, grants access to the USB device without questions and launches the player chosen. This eliminates possible conflicts and simplifies the use. If you want all your players back, select *I'll control it myself!* and tap OK.
 * ***Battery saver*** is improved: it stops 4 out of 8 CPU kernels, and stops Media Scanner.
@@ -50,3 +58,6 @@ The known problem of this version is that Android kills the application when it 
 
 **Q**: Where is my internal storage in USB Mass Storage mode? The second disk is not inserted!<br />
 **A**: USB Mass Storage provides direct access to a real disk. The user visible internal storage is actually a folder of the internal disk (flash partition formatted with ext4). Though it is possible to export this whole partition, and ext4-aware OS (Linux) recognizes it, it has a little sense, because access rights keep the iternal storage directory out of reach anyway. Changing (accidentally or intentionally) these access rights will ruin DX200.
+
+**Q**: USB Audio looks like hung on starting the interface. Why?<br />
+**A**: Most probably an application plays music via Android, and keeps the interface from switching this way. Push Pause button to let USB Audio go.
