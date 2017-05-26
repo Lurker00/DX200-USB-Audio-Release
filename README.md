@@ -6,7 +6,8 @@ Don't like Mango, or it does not suit your needs? Just forget about it, and use 
 Currently, there are 3 applications, fully compatible with USB Audio:
 * free [HibyMusic](https://play.google.com/store/apps/details?id=com.hiby.music) (a special build is embedded into firmware 2.2.110 Rev.2),
 * [USB Audio Player PRO](https://play.google.com/store/apps/details?id=com.extreamsd.usbaudioplayerpro),
-* [Neutron Music](https://play.google.com/store/apps/details?id=com.neutroncode.mp).<br />
+* [Neutron Music](https://play.google.com/store/apps/details?id=com.neutroncode.mp).
+
 They cover almost, if not all, file formats and sound sources around, and have rich functionality.
 
 **Please note:** When Mango plays DSD tracks, it switches XMOS chip into USB DAC mode. Avoid playing DSD in Mango in Android, if you have configured UAPP/Hiby/Neutron to auto-start when USB DAC is attached! They will fight for the access to USB DAC with Mango.
