@@ -3,7 +3,11 @@ This application switches iBasso DX200 audio processor (XMOS chip) into USB DAC 
 
 Don't like Mango, or it does not suit your needs? Just forget about it, and use USB Audio Player PRO, or Hiby Music, fully utilizing the great hardware of DX200! The startup screen of **USB Audio for DX200** has listed compatible applications, along with the required settings.
 
-Currently, there are 3 applications, fully compatible with USB Audio: free [HibyMusic](https://play.google.com/store/apps/details?id=com.hiby.music) (a special build is embedded into firmware 2.2.110 Rev.2), [USB Audio Player PRO](https://play.google.com/store/apps/details?id=com.extreamsd.usbaudioplayerpro), [Neutron Music](https://play.google.com/store/apps/details?id=com.neutroncode.mp). They cover almost, if not all, file formats and sound sources around, and have rich functionality.
+Currently, there are 3 applications, fully compatible with USB Audio:
+* free [HibyMusic](https://play.google.com/store/apps/details?id=com.hiby.music) (a special build is embedded into firmware 2.2.110 Rev.2),
+* [USB Audio Player PRO](https://play.google.com/store/apps/details?id=com.extreamsd.usbaudioplayerpro),
+* [Neutron Music](https://play.google.com/store/apps/details?id=com.neutroncode.mp).<br />
+They cover almost, if not all, file formats and sound sources around, and have rich functionality.
 
 **Please note:** When Mango plays DSD tracks, it switches XMOS chip into USB DAC mode. Avoid playing DSD in Mango in Android, if you have configured UAPP/Hiby/Neutron to auto-start when USB DAC is attached! They will fight for the access to USB DAC with Mango.
 
@@ -13,8 +17,8 @@ Currently, there are 3 applications, fully compatible with USB Audio: free [Hiby
 
 ## History of public releases
 **1.0.39** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.2.110 Rev.2:
-* USB Audio saves at reboot or power off, and restores ant boot up, the DX200-specific sound settings: digital filter, gain, auto-mute.
 * ***USB DAC*** menu item - turns DX200 into USB DAC mode.
+* USB Audio saves at reboot or power off, and restores ant boot up, the DX200-specific sound settings: digital filter, gain, auto-mute. Now MangoPlayer can be safely disabled in Amdroid Apps settings, to prevent acidental launch and possible conflict with USB Audio.
 * Attempt to switch XMOS chip modes (start/stop interface, start/stop USB DAC) is not allowed when an S/PDIF cable is attached, and a warning message is displayed. This is due to a discovered problem, that the audio driver does not correctly switches modes with S/PDIF cable attached, down to device hang.
 * Minor bug fixes, notification display improved.
 
