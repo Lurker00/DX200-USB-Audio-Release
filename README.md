@@ -19,7 +19,7 @@ They cover almost, if not all, file formats and sound sources around, and have r
 ## History of public releases
 **1.0.39** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.2.110 Rev.2:
 * ***USB DAC*** menu item - turns DX200 into USB DAC mode.
-* USB Audio saves at reboot or power off, and restores ant boot up, the DX200-specific sound settings: digital filter, gain, auto-mute. Now MangoPlayer can be safely disabled in Amdroid Apps settings, to prevent acidental launch and possible conflict with USB Audio.
+* USB Audio saves at reboot or power off, and restores ant boot up, the DX200-specific sound settings: digital filter, gain, auto-mute. Now MangoPlayer has no a feature that requires to use it.
 * Attempt to switch XMOS chip modes (start/stop interface, start/stop USB DAC) is not allowed when an S/PDIF cable is attached, and a warning message is displayed. This is due to a discovered problem, that the audio driver does not correctly switches modes with S/PDIF cable attached, down to device hang.
 * Minor bug fixes, notification display improved.
 
