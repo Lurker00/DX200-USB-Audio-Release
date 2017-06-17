@@ -17,6 +17,13 @@ They cover almost, if not all, file formats and sound sources around, and have r
 **Known problem:** During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen with any other sample rate, including DSD. A workaround for 16/44.1 recordings is to use any player with playback via Android: it does not affect the quality ([the proof](https://github.com/Lurker00/DX200-firmware/blob/master/tools/README.md#tracks-to-test-bit-perfect-playback)).
 
 ## History of public releases
+**1.1.43** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.3.125:
+* Most of the settings are moved to the ***Settings*** menu. This new user interface item is a reason to increase the minor version number ;)
+* ***Filter media buttons*** tries to hook Play/Pause, Next, Previous buttons, and filters out short (less than 100 ms) presses of Play/Pause button. Then it forwards events to the ***Active player***. It also prevents Play/Pause to work when the USB interface is temporary down. It may help if you experience a problem with phantom Play/Pause presses (some people do).
+* ***Beep on USB Audio detached*** beeps if the USB interface has been detached, and the screen is turned off. It is useful to know that ***Idle timeout*** has been expired, and you need to turn screen on for a moment to continue listening.
+* ***Hide MangoPlayer*** just hides it away from the desktop, like it is not installed.
+* If a music is being played via Android, USB Audio can't start the interface. The new version detects such situations, informs the user via a toast, and does prevents manula start of the interface in such a situation.
+
 **1.0.39** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.2.110 Rev.2:
 * ***USB DAC*** menu item - turns DX200 into USB DAC mode.
 * USB Audio saves at reboot or power off, and restores ant boot up, the DX200-specific sound settings: digital filter, gain, auto-mute. Now MangoPlayer has no a feature that requires to use it.
