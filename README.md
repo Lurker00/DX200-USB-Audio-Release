@@ -17,6 +17,11 @@ They cover almost, if not all, file formats and sound sources around, and have r
 **Known problem:** During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen with any other sample rate, including DSD. A workaround for 16/44.1 recordings is to use any player with playback via Android: it does not affect the quality ([the proof](https://github.com/Lurker00/DX200-firmware/blob/master/tools/README.md#tracks-to-test-bit-perfect-playback)).
 
 ## History of public releases
+**1.1.44** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.3.125L1:
+* Start/Stop button in the notification bar, to control from the lock screen.
+* Support for Onkyo HF Player. Warning: don't touch volume control, when Onkyo HF Player plays via USB Audio, as it may damage your hearing and/or headphones!
+* Now USB Audio detects Internet connection, and disables ***Battery saver*** mode on connect, and restores on disconnect.
+
 **1.1.43** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.3.125:
 * Most of the settings are moved into the ***Settings*** menu. This new user interface item is the reason to increase the minor version number ;)
 * ***Filter media buttons*** tries to hook Play/Pause, Next, Previous buttons, and filters out short (less than 100 ms) presses of Play/Pause button, but only if ***Active player*** is set. Then it forwards events to the ***Active player***. It also prevents Play/Pause to work when the USB interface is temporary down. It helps if you experience a problem with phantom Play/Pause presses (some people do).
