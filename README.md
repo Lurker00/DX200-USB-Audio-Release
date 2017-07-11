@@ -12,7 +12,7 @@ This application switches iBasso DX200 audio processor (XMOS chip) into USB DAC 
 Don't like Mango, or it does not suit your needs? Just forget about it, and use other applications, fully utilizing the great hardware of DX200! The startup screen of **USB Audio for DX200** has listed compatible applications, along with the required settings.
 
 Currently, there are 3 applications, fully compatible with USB Audio:
-* free [HibyMusic](https://play.google.com/store/apps/details?id=com.hiby.music) (a special build is embedded into firmware 2.2.110 Rev.2),
+* free [HibyMusic](https://play.google.com/store/apps/details?id=com.hiby.music) (a special build is embedded into firmware 2.2.110 Rev.2 and later),
 * [USB Audio Player PRO](https://play.google.com/store/apps/details?id=com.extreamsd.usbaudioplayerpro),
 * [Neutron Music](https://play.google.com/store/apps/details?id=com.neutroncode.mp).
 
