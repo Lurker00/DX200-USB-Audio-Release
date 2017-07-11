@@ -24,6 +24,7 @@ They cover almost, if not all, file formats and sound sources around, and have r
 
 ## Menu items
 * ***Settings*** - read the next chapter.
+* ***CPU Turbo Mode*** - turn it on, if music can't be played when the display is turned off.
 * ***USB DAC*** - turns DX200 into USB DAC mode. The Android interface is disabled while USB DAC mode is active.
 * ***Exit*** - exits the application and removes its icon and bar from the notifications area.
 
