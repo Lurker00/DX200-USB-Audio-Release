@@ -1,4 +1,10 @@
 # USB Audio for DX200
+1. [Introduction](#introduction)
+2. [Menu Items](#menu-items)
+3. [Settings](md#settings)
+4. [FAQ](#faq)
+5. [History of public releases](#history-of-public-releases)
+## Introduction
 This application switches iBasso DX200 audio processor (XMOS chip) into USB DAC mode, accessible for Android applications, installed on this DX200 itself! When **USB Audio for DX200** starts the USB DAC Interface, any compatible Android music player application, that supports and is configured to use a USB DAC, will play bit perfect audio, including DSD! For DSD, it supports both Native and DoP modes, and even DoP-encoded PCM formats, e.g. in flac.
 
 Don't like Mango, or it does not suit your needs? Just forget about it, and use other applications, fully utilizing the great hardware of DX200! The startup screen of **USB Audio for DX200** has listed compatible applications, along with the required settings.
