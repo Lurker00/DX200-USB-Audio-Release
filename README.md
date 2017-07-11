@@ -16,6 +16,19 @@ They cover almost, if not all, file formats and sound sources around, and have r
 
 **Known problem:** During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen with any other sample rate, including DSD. A workaround for 16/44.1 recordings is to use any player with playback via Android: it does not affect the quality ([the proof](https://github.com/Lurker00/DX200-firmware/blob/master/tools/README.md#tracks-to-test-bit-perfect-playback)).
 
+# Settings
+* ***Acquire WakeLock*** - prevents the device to go to sleep mode, while the interface is active. Without ***Smart release of WakeLock***, you have to stop the interface manually to let the device sleep.
+* ***Smart release of WakeLock*** - checks for music playback in a supported application, and releases the wakelock after ***Idle Timeout*** period of detected inactivity.
+* ***Idle Timeout*** - number of seconds of inactivity of a supported application, after which the wakelock is released.
+* ***Active player*** - choose the music player application that you currently use most of time, even if you have only one USB Audio compatible player. If there are more than one recognized players, the application hides other players (they are still installed, and their data is kept!), and, on USB device attached event, grants access to the USB device without questions and launches the player chosen. This eliminates possible conflicts and simplifies the use. If you want all your players back, select *I'll control it myself!* and tap OK.
+* ***Filter media buttons*** tries to hook Play/Pause, Next, Previous buttons, and filters out short (less than 100 ms) presses of Play/Pause button, but only if the ***Active player*** is set. Then it forwards events to the ***Active player***. It also prevents Play/Pause to work when the USB interface is temporary down. It helps if you experience a problem with phantom Play/Pause presses (some people do).
+* ***Beep on USB Audio detached*** beeps if the USB interface has been detached, and the screen is turned off. It is useful to know that ***Idle timeout*** has been expired, and you need to turn screen on for a moment to continue listening.
+* ***Battery saver*** - turns on Android Battery Saver mode when the interface is active. It does not actually save much battery, because the main consumers are DAC and amp. But it does reduce background activity of Android and Google stuff. In addition to the basic Android functionality, it stops 4 out of 8 CPU kernels, and stops Media Scanner. USB Audio detects when Inyernet connection becomes active and turns this mode off, to let apps to use Internet, and turns it back off on disconnect from Internet.
+* ***Autostart*** - turn on to start the interface on application launch, without the need to push _Start_ button.
+* ***Hide MangoPlayer*** just hides MangoPlayer away from the desktop, like it is not installed. Recommended if you don't actually use it.
+
+***Active player*** lists the currently installed supported applications. The items marked with asterisk (\*) are visible. If you have an application you want to be supported, please let me know!
+
 ## History of public releases
 **1.1.44** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.3.125L1:
 * Start/Stop button in the notification bar, to control from the lock screen.
@@ -24,9 +37,7 @@ They cover almost, if not all, file formats and sound sources around, and have r
 
 **1.1.43** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.3.125:
 * Most of the settings are moved into the ***Settings*** menu. This new user interface item is the reason to increase the minor version number ;)
-* ***Filter media buttons*** tries to hook Play/Pause, Next, Previous buttons, and filters out short (less than 100 ms) presses of Play/Pause button, but only if ***Active player*** is set. Then it forwards events to the ***Active player***. It also prevents Play/Pause to work when the USB interface is temporary down. It helps if you experience a problem with phantom Play/Pause presses (some people do).
-* ***Beep on USB Audio detached*** beeps if the USB interface has been detached, and the screen is turned off. It is useful to know that ***Idle timeout*** has been expired, and you need to turn screen on for a moment to continue listening.
-* ***Hide MangoPlayer*** just hides it away from the desktop, like it is not installed.
+* ***Filter media buttons***, ***Beep on USB Audio detached***, ***Hide MangoPlayer*** settings added.
 * If music is being played via Android, USB Audio can't start the interface. The new version detects such situations, informs the user via a toast, and does prevents manual start of the interface in such a situation.
 * A new method to turn the USB interface on and keep it active, which does not consume a CPU cycle anymore.
 
@@ -37,16 +48,14 @@ They cover almost, if not all, file formats and sound sources around, and have r
 * Minor bug fixes, notification display improved.
 
 **1.0.35** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.2.110 Rev.1:
-* ***Active player*** - choose the music player application that you currently use most of time, even if you have only one USB Audio compatible player. If there are more than one recognized players, the application hides other players (they are still visible in Android Settings-Apps menu), and, on USB device attached event, grants access to the USB device without questions and launches the player chosen. This eliminates possible conflicts and simplifies the use. If you want all your players back, select *I'll control it myself!* and tap OK.
-* ***Battery saver*** is improved: it stops 4 out of 8 CPU kernels, and stops Media Scanner.
+* ***Active player*** added, ***Battery saver*** is improved: it stops 4 out of 8 CPU kernels, and stops Media Scanner.
 * The notification bar now contains information about current application state, displays number of detected wakelocks (right bottom corner, including its own wakelock), and idle time chronometer.
 * If the interface was detached due to doze mode, it is not restarted immediatelly once the screen is turned on: it waits for around 5 seconds before initiates restart. This allows to only take a look to the lock screen, or keeps the interface from unneeded restart in case a background service turns the display on for a moment.
 * Many other fixes and improvements.
 
 **1.0.30** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.2.110:
 * ***Smart release of WakeLock*** menu setting added, with corresponding ***Idle Timeout*** value.
-With this (and _Acquire WakeLock_) setting turned on, the application tries to detect that no a known music player actually use the USB DAC, by checking wakelocks from other processes. If no a know wakelock found for the timeout period, the application releases its own wakelock, letting Android to enter doze mode.
-* ***Battery saver*** menu option added, which turns on Android Battery Saver mode when the interface is active. It does not actually save much battery, because the main consumers are DAC and amp. But it does reduce background activity of Android and Google stuff.
+* ***Battery saver*** menu option added.
 * ***CPU Turbo Mode*** menu option added. Turn it on, if music can't be played when the display is turned off. For instance, playback of SACD ISO images encoded with DST requires a lot of CPU power. When display turns off, Android on DX200 stops 7 from 8 CPU cores. Turbo Mode keeps 3 additional cores (to 4 total) from stopping. If _Acquire WakeLock_ and _Smart Release_ are enabled, the cores are made available for stopping during smart release period. Turbo Mode is activated on application start, even if the interface is not started. This allows to use MangoPlayer in Turbo mode as well, but be careful: smart  release does not work when the interface is not started!
 
 These features require either SuperSU installed, or permissions available only for pre-installed applications. This restriction makes no sense to make new versions for the stock firmware anymore.
