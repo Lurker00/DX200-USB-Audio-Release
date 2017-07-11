@@ -59,6 +59,9 @@ They cover almost, if not all, file formats and sound sources around, and have r
 **Q**: USB Audio looks like hung on starting the interface. Why?<br />
 **A**: Most probably an application plays music via Android, and keeps the interface from switching this way. Push Pause button to let USB Audio go.
 
+**Q**: PowerAmp Alpha has claimed to support USB DACs, but it does not produce any sound with USB Audio. Why?<br />
+**A**: Actually, PowerAmp build 703/704 does not support USB DACs directly. It relies on Android to route the sound to the DAC correctly. But in DX200, Android does not correctly route sound to USB Audio.
+
 ## Known problems
 During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen with any other sample rate, including DSD. A workaround for 16/44.1 recordings is to use any player with playback via Android: it does not affect the quality ([the proof](https://github.com/Lurker00/DX200-firmware/blob/master/tools/README.md#tracks-to-test-bit-perfect-playback)).
 
