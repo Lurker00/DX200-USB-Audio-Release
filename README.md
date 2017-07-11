@@ -1,9 +1,11 @@
 # USB Audio for DX200
 1. [Introduction](#introduction)
-2. [Menu items](#menu-items)
-3. [Settings](md#settings)
-4. [FAQ](#faq)
-5. [History of public releases](#history-of-public-releases)
+1. [Menu items](#menu-items)
+1. [Settings](md#settings)
+1. [FAQ](#faq)
+1. [Known problems](#known-problems)
+1. [History of public releases](#history-of-public-releases)
+
 ## Introduction
 This application switches iBasso DX200 audio processor (XMOS chip) into USB DAC mode, accessible for Android applications, installed on this DX200 itself! When **USB Audio for DX200** starts the USB DAC Interface, any compatible Android music player application, that supports and is configured to use a USB DAC, will play bit perfect audio, including DSD! For DSD, it supports both Native and DoP modes, and even DoP-encoded PCM formats, e.g. in flac.
 
@@ -19,8 +21,6 @@ They cover almost, if not all, file formats and sound sources around, and have r
 **Please note:** When Mango plays DSD tracks, it switches XMOS chip into USB DAC mode. Avoid playing DSD in Mango in Android, if you have configured UAPP/Hiby/Neutron to auto-start when USB DAC is attached! They will fight for the access to USB DAC with Mango.
 
 **Warning:** Avoid having installed and configured for USB DAC playback more than one application at a time! They tend to autolaunch on a device attached, and you'll have a mess! If you want more than one USB Audio compatible music player, use ***Active player*** feature to avoid problems.
-
-**Known problem:** During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen with any other sample rate, including DSD. A workaround for 16/44.1 recordings is to use any player with playback via Android: it does not affect the quality ([the proof](https://github.com/Lurker00/DX200-firmware/blob/master/tools/README.md#tracks-to-test-bit-perfect-playback)).
 
 ## Menu items
 * ***Settings*** - read the next chapter.
@@ -58,6 +58,9 @@ They cover almost, if not all, file formats and sound sources around, and have r
 
 **Q**: USB Audio looks like hung on starting the interface. Why?<br />
 **A**: Most probably an application plays music via Android, and keeps the interface from switching this way. Push Pause button to let USB Audio go.
+
+## Known problems
+During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen with any other sample rate, including DSD. A workaround for 16/44.1 recordings is to use any player with playback via Android: it does not affect the quality ([the proof](https://github.com/Lurker00/DX200-firmware/blob/master/tools/README.md#tracks-to-test-bit-perfect-playback)).
 
 ## History of public releases
 **1.1.44** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.3.125L1:
