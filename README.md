@@ -16,7 +16,12 @@ They cover almost, if not all, file formats and sound sources around, and have r
 
 **Known problem:** During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen with any other sample rate, including DSD. A workaround for 16/44.1 recordings is to use any player with playback via Android: it does not affect the quality ([the proof](https://github.com/Lurker00/DX200-firmware/blob/master/tools/README.md#tracks-to-test-bit-perfect-playback)).
 
-# Settings
+## Menu Items
+* ***Settings*** - read the next chapter.
+* ***USB DAC*** - turns DX200 into USB DAC mode. The Android interface is disabled while USB DAC mode is active.
+* ***Exit*** - exits the application and removes its icon and bar from the notifications area.
+
+## Settings
 * ***Acquire WakeLock*** - prevents the device to go to sleep mode, while the interface is active. Without ***Smart release of WakeLock***, you have to stop the interface manually to let the device sleep.
 * ***Smart release of WakeLock*** - checks for music playback in a supported application, and releases the wakelock after ***Idle Timeout*** period of detected inactivity.
 * ***Idle Timeout*** - number of seconds of inactivity of a supported application, after which the wakelock is released.
@@ -28,6 +33,25 @@ They cover almost, if not all, file formats and sound sources around, and have r
 * ***Hide MangoPlayer*** just hides MangoPlayer away from the desktop, like it is not installed. Recommended if you don't actually use it.
 
 ***Active player*** lists the currently installed supported applications. The items marked with asterisk (\*) are visible. If you have an application you want to be supported, please let me know!
+
+## FAQ
+**Q**: Is it safe to run DX200 in this mode?<br />
+**A**: Actually, Mango on both DX80 and DX200 uses this mode to playback DSD. So, yes - it is safe!
+
+**Q**: Do I need a special/custom firmware build, or a root access, or anything else special?<br />
+**A**: The basic functionality works with any stock firmware. Advanced features added in 1.0.24+ versions require it to be a part of the custom firmware.
+
+**Q**: Why XXX application is not compatible, but perfectly deals with an external USB DAC?<br />
+**A**: I don't know the exact reason, but, most probably, this is due to misuse of the volume controls, which leads to damaged bit stream output to this USB DAC.
+
+**Q**: PCM formats sound OK, but with DSD I hear only a noise! What's wrong?<br />
+**A**: Check software volume control in your player application and be sure it is set to 100%.
+
+**Q**: Where is my internal storage in USB Mass Storage mode? The second disk is not inserted!<br />
+**A**: USB Mass Storage provides direct access to a real disk. The user visible internal storage is actually a folder of the internal disk (flash partition formatted with ext4). Though it is possible to export this whole partition, and ext4-aware OS (Linux) recognizes it, it has a little sense, because access rights keep the iternal storage directory out of reach anyway. Changing (accidentally or intentionally) these access rights will ruin DX200.
+
+**Q**: USB Audio looks like hung on starting the interface. Why?<br />
+**A**: Most probably an application plays music via Android, and keeps the interface from switching this way. Push Pause button to let USB Audio go.
 
 ## History of public releases
 **1.1.44** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.3.125L1:
@@ -69,22 +93,3 @@ These features require either SuperSU installed, or permissions available only f
 The known problem of this version is that Android kills the application when it is the only application which holds wakelock for a long time.
 
 **1.0.20** - initial release.
-
-## FAQ
-**Q**: Is it safe to run DX200 in this mode?<br />
-**A**: Actually, Mango on both DX80 and DX200 uses this mode to playback DSD. So, yes - it is safe!
-
-**Q**: Do I need a special/custom firmware build, or a root access, or anything else special?<br />
-**A**: The basic functionality works with any stock firmware. Advanced features added in 1.0.24+ versions require it to be a part of the custom firmware.
-
-**Q**: Why XXX application is not compatible, but perfectly deals with an external USB DAC?<br />
-**A**: I don't know the exact reason, but, most probably, this is due to misuse of the volume controls, which leads to damaged bit stream output to this USB DAC.
-
-**Q**: PCM formats sound OK, but with DSD I hear only a noise! What's wrong?<br />
-**A**: Check software volume control in your player application and be sure it is set to 100%.
-
-**Q**: Where is my internal storage in USB Mass Storage mode? The second disk is not inserted!<br />
-**A**: USB Mass Storage provides direct access to a real disk. The user visible internal storage is actually a folder of the internal disk (flash partition formatted with ext4). Though it is possible to export this whole partition, and ext4-aware OS (Linux) recognizes it, it has a little sense, because access rights keep the iternal storage directory out of reach anyway. Changing (accidentally or intentionally) these access rights will ruin DX200.
-
-**Q**: USB Audio looks like hung on starting the interface. Why?<br />
-**A**: Most probably an application plays music via Android, and keeps the interface from switching this way. Push Pause button to let USB Audio go.
