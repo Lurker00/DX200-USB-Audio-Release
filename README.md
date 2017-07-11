@@ -1,6 +1,6 @@
 # USB Audio for DX200
 1. [Introduction](#introduction)
-2. [Menu Items](#menu-items)
+2. [Menu items](#menu-items)
 3. [Settings](md#settings)
 4. [FAQ](#faq)
 5. [History of public releases](#history-of-public-releases)
@@ -22,7 +22,7 @@ They cover almost, if not all, file formats and sound sources around, and have r
 
 **Known problem:** During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen with any other sample rate, including DSD. A workaround for 16/44.1 recordings is to use any player with playback via Android: it does not affect the quality ([the proof](https://github.com/Lurker00/DX200-firmware/blob/master/tools/README.md#tracks-to-test-bit-perfect-playback)).
 
-## Menu Items
+## Menu items
 * ***Settings*** - read the next chapter.
 * ***USB DAC*** - turns DX200 into USB DAC mode. The Android interface is disabled while USB DAC mode is active.
 * ***Exit*** - exits the application and removes its icon and bar from the notifications area.
