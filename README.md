@@ -24,7 +24,6 @@ They cover almost, if not all, file formats and sound sources around, and have r
 
 ## Menu items
 * ***Settings*** - read the next chapter.
-* ***CPU Turbo Mode*** - turn it on, if music can't be played when the display is turned off.
 * ***USB DAC*** - turns DX200 into USB DAC mode. The Android interface is disabled while USB DAC mode is active.
 * ***Exit*** - exits the application and removes its icon and bar from the notifications area.
 
@@ -64,6 +63,9 @@ They cover almost, if not all, file formats and sound sources around, and have r
 During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen with any other sample rate, including DSD. A workaround for 16/44.1 recordings is to use any player with playback via Android: it does not affect the quality ([the proof](https://github.com/Lurker00/DX200-firmware/blob/master/tools/README.md#tracks-to-test-bit-perfect-playback)).
 
 ## History of public releases
+**1.1.45** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.3.125L2:
+* All CPU cores control has been removed, including ***CPU Turbo Mode***: CPU cores are controled by custom Android Power HAL module.
+
 **1.1.44** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.3.125L1:
 * Start/Stop button in the notification bar, to control from the lock screen.
 * Support for Onkyo HF Player. Warning: don't touch volume control, when Onkyo HF Player plays via USB Audio, as it may damage your hearing and/or headphones!
