@@ -2,7 +2,7 @@
 1. [Introduction](#introduction)
 1. [Menu items](#menu-items)
 1. [Settings](#settings)
-1. [Indicator color](#indicator_color)
+1. [Indicator color](#indicator-color)
 1. [FAQ](#faq)
 1. [Known problems](#known-problems)
 1. [History of public releases](#history-of-public-releases)
