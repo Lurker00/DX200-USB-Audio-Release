@@ -77,6 +77,7 @@ During playback of tracks with 44.1KHz sampling rate, short cracking noise may a
 ## History of public releases
 **1.1.48** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.5.141L1:
 * With ***Smart release of WakeLock*** turned on, when in idle state, USB Audio detects music playback in any application, and acquires its own wakelock to prevent Android from immediate sleep mode when the music is put on pause. The wakelock timeout is controlled by the same ***Idle Timeout*** value.
+* ***Filter media buttons*** option has been removed.
 
 **1.1.45** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.3.125L2:
 * All CPU cores control has been removed, including ***CPU Turbo Mode***: CPU cores are controled by custom Android Power HAL module.
