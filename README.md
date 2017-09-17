@@ -1,7 +1,8 @@
 # USB Audio for DX200
 1. [Introduction](#introduction)
 1. [Menu items](#menu-items)
-1. [Settings](md#settings)
+1. [Settings](#settings)
+1. [Indicator color](#indicator_color)
 1. [FAQ](#faq)
 1. [Known problems](#known-problems)
 1. [History of public releases](#history-of-public-releases)
@@ -40,6 +41,14 @@ They cover almost, if not all, file formats and sound sources around, and have r
 
 ***Active player*** lists the currently installed supported applications. The items marked with asterisk (\*) are visible. If you have an application you want to be supported, please let me know!
 
+## Indicator color
+The circle in the bottom right corner of the applciation icon in the notification bar reflects the current state:
+* Gray - idle state.
+* Green - the interface is active and ready to use.
+* Yellow - the interface is being restarted after a disconnect.
+* Red - the interface was disconnected and is about to be restarted.
+* Blue - idle state with music playback detected. The smart wakelock is active.
+
 ## FAQ
 **Q**: Is it safe to run DX200 in this mode?<br />
 **A**: Actually, Mango on both DX80 and DX200 uses this mode to playback DSD. So, yes - it is safe!
@@ -66,6 +75,9 @@ They cover almost, if not all, file formats and sound sources around, and have r
 During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen with any other sample rate, including DSD. A workaround for 16/44.1 recordings is to use any player with playback via Android: it does not affect the quality ([the proof](https://github.com/Lurker00/DX200-firmware/blob/master/tools/README.md#tracks-to-test-bit-perfect-playback)).
 
 ## History of public releases
+**1.1.48** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.5.141L1:
+* With ***Smart release of WakeLock*** turned on, when in idle state, USB Audio detects music playback in any application, and acquires its own wakelock to prevent Android from immediate sleep mode when the music is put on pause. The wakelock timeout is controlled by the same ***Idle Timeout*** value.
+
 **1.1.45** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.3.125L2:
 * All CPU cores control has been removed, including ***CPU Turbo Mode***: CPU cores are controled by custom Android Power HAL module.
 
