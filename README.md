@@ -9,7 +9,7 @@
 
 ## Introduction
 Starting from version **1.2.56**, this application became a system wide control center, meaning, useful for anybody:
-* ***System settings*** menu allows to stop Google/Android unwanted background activity, and to provide write access to SD-card for any application.
+* [***System settings***](#system-settings) menu allows to stop Google/Android unwanted background activity, and to provide write access to SD-card for any application.
 * The application reliably detects music playback, and ***Smart release of WakeLock*** works for any music player.
 
 This application switches iBasso DX200 audio processor (XMOS chip) into USB DAC mode, accessible for Android applications, installed on this DX200 itself! When **USB Audio for DX200** starts the USB DAC Interface, any compatible Android music player application, that supports and is configured to use a USB DAC, will play bit perfect audio, including DSD! For DSD, it supports both Native and DoP modes, and even DoP-encoded PCM formats, e.g. in flac.
@@ -28,8 +28,8 @@ They cover almost, if not all, file formats and sound sources around, and have r
 **Warning:** Avoid having installed and configured for USB DAC playback more than one application at a time! They tend to autolaunch on a device attached, and you'll have a mess! If you want more than one USB Audio compatible music player, use ***Active player*** feature to avoid problems.
 
 ## Menu items
-* ***Settings*** - see below for details.
-* ***System settings*** - system wide settings and actions. See below for details.
+* ***Settings*** - see [below for details]((#settings)).
+* ***System settings*** - system wide settings and actions. See [below for details](#system-settings).
 * ***USB DAC*** - turns DX200 into USB DAC mode. The Android interface is disabled while USB DAC mode is active.
 * ***Clear the log*** - clears the log screen.
 * ***Show ALSA state*** - displays information about currently played music format. This is the format that ALSA (Linux level sound driver) accepts and then sends to the DAC.
