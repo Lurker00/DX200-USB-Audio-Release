@@ -10,7 +10,7 @@
 ## Introduction
 Starting from version **1.2.56**, this application became a system wide control center, meaning, useful for anybody:
 * [***System settings***](#system-settings) menu allows to stop Google/Android unwanted background activity, and to provide write access to SD-card for any application.
-* The application reliably detects music playback, and ***Smart release of WakeLock*** works for any music player.
+* The application reliably detects music playback, and [***Smart release of WakeLock***](#settings) works for any music player.
 
 This application switches iBasso DX200 audio processor (XMOS chip) into USB DAC mode, accessible for Android applications, installed on this DX200 itself! When **USB Audio for DX200** starts the USB DAC Interface, any compatible Android music player application, that supports and is configured to use a USB DAC, will play bit perfect audio, including DSD! For DSD, it supports both Native and DoP modes, and even DoP-encoded PCM formats, e.g. in flac.
 
@@ -42,6 +42,7 @@ They cover almost, if not all, file formats and sound sources around, and have r
 * ***Active player*** - choose the music player application that you currently use most of time, even if you have only one USB Audio compatible player. If there are more than one recognized players, the application hides other players (they are still installed, and their data is kept!), and, on USB device attached event, grants access to the USB device without questions and launches the player chosen. This eliminates possible conflicts and simplifies the use. If you want all your players back, select *I'll control it myself!* and tap OK.
 * ***Beep on USB Audio detached*** beeps if the USB interface has been detached, and the screen is turned off. It is useful to know that ***Idle timeout*** has been expired, and you need to turn screen on for a moment to continue listening.
 * ***Autostart*** - turn on to start the interface on application launch, without the need to push _Start_ button.
+* ***Current theme:*** allows you to choose from 6 Android standard themes for the application.
 
 ***Active player*** lists the currently installed supported applications. The items marked with asterisk (\*) are visible. If you have an application you want to be supported, please let me know!
 
@@ -53,7 +54,8 @@ For the best experience, it is recommended to turn these settings all green.
 * ***Disable Google services*** disables both Google services and Play Market, and eliminates their background activity. It backs up your Google account information, and restores it when this option is turned off.
 * ***Disable media scanner*** stops the media scanner, which scans all your files time to time. Turning this option off forces media re-scan, which is useful when you have added or deleted some files, and want to access them via MTP.
 * ***Disable system logs*** - turn this option off only if you need to collect system logs for investigation. Disabled by default, because it eliminates a lot of background work.
-* ***Collect system logs*** - push this button to collect system logs, e.g. to send to me for investigation. It creates files on the internal storage with names `syslogs0.tgz`, `syslogs1.tgz` etc. up to 5 in total, and syslogs0.tgz is always the most recent collection.
+* ***Collect system logs*** - push this button to collect system logs, e.g. to send to me for investigation. It creates files on the internal storage with names `syslogs0.tgz`, `syslogs1.tgz` etc. up to 5 in total, and `syslogs0.tgz` is always the most recent collection.
+* ***Grant SD card write access to all apps*** - Android in DX200 has broken the standard way to let the user grant write access to apps. This button grants it to all at once. If you have updated an app that needs write access, you have to push this buton again.
 
 ## Indicator color
 The circle in the bottom right corner of the applciation icon in the notification bar reflects the current state:
