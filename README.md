@@ -28,7 +28,7 @@ They cover almost, if not all, file formats and sound sources around, and have r
 **Warning:** Avoid having installed and configured for USB DAC playback more than one application at a time! They tend to autolaunch on a device attached, and you'll have a mess! If you want more than one USB Audio compatible music player, use ***Active player*** feature to avoid problems.
 
 ## Menu items
-* ***Settings*** - see [below for details]((#settings)).
+* ***Settings*** - see [below for details](#settings).
 * ***System settings*** - system wide settings and actions. See [below for details](#system-settings).
 * ***USB DAC*** - turns DX200 into USB DAC mode. The Android interface is disabled while USB DAC mode is active.
 * ***Clear the log*** - clears the log screen.
@@ -41,13 +41,19 @@ They cover almost, if not all, file formats and sound sources around, and have r
 * ***Idle Timeout*** - number of seconds of inactivity of a supported application, after which the wakelock is released.
 * ***Active player*** - choose the music player application that you currently use most of time, even if you have only one USB Audio compatible player. If there are more than one recognized players, the application hides other players (they are still installed, and their data is kept!), and, on USB device attached event, grants access to the USB device without questions and launches the player chosen. This eliminates possible conflicts and simplifies the use. If you want all your players back, select *I'll control it myself!* and tap OK.
 * ***Beep on USB Audio detached*** beeps if the USB interface has been detached, and the screen is turned off. It is useful to know that ***Idle timeout*** has been expired, and you need to turn screen on for a moment to continue listening.
-* ***Battery saver*** - turns on Android Battery Saver mode when the interface is active. It does not actually save much battery, because the main consumers are DAC and amp. But it does reduce background activity of Android and Google stuff. In addition to the basic Android functionality, it stops 4 out of 8 CPU kernels, and stops Media Scanner. USB Audio detects when Internet connection becomes active and turns this mode off, to let apps to use Internet, and turns it back on when disconnect from Internet detected.
 * ***Autostart*** - turn on to start the interface on application launch, without the need to push _Start_ button.
-* ***Hide MangoPlayer*** just hides MangoPlayer away from the desktop, like it is not installed. Recommended if you don't actually use it.
 
 ***Active player*** lists the currently installed supported applications. The items marked with asterisk (\*) are visible. If you have an application you want to be supported, please let me know!
 
 ## System settings
+For the best experience, it is recommended to turn these settings all green.
+* ***DSD/384kHz support for Neutron*** - turn it off only if this support creates conflicts with other applications (very unlikely).
+* ***Battery saver*** - turns on Android Battery Saver mode system wide. It does not actually save much battery, because the main consumers are DAC and amp. But it does reduce background activity of Android and Google stuff.
+* ***Hide MangoPlayer*** just hides MangoPlayer away from the desktop, like it is not installed. Recommended if you don't actually use it.
+* ***Disable Google services*** disables both Google services and Play Market, and eliminates their background activity. It backs up your Google account information, and restores it when this option is turned off.
+* ***Disable media scanner*** stops the media scanner, which scans all your files time to time. Turning this option off forces media re-scan, which is useful when you have added or deleted some files, and want to access them via MTP.
+* ***Disable system logs*** - turn this option off only if you need to collect system logs for investigation. Disabled by default, because it eliminates a lot of background work.
+* ***Collect system logs*** - push this button to collect system logs, e.g. to send to me for investigation. It creates files on the internal storage with names `syslogs0.tgz`, `syslogs1.tgz` etc. up to 5 in total, and syslogs0.tgz is always the most recent collection.
 
 ## Indicator color
 The circle in the bottom right corner of the applciation icon in the notification bar reflects the current state:
