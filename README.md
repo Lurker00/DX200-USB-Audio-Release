@@ -8,10 +8,14 @@
 1. [History of public releases](#history-of-public-releases)
 
 ## Introduction
+### For everybody
 Starting from version **1.2.56**, this application became a system wide control center, meaning, useful for anybody:
 * [***System settings***](#system-settings) menu allows to stop Google/Android unwanted background activity, and to provide write access to SD-card for any application.
 * The application reliably detects music playback, and [***Smart release of WakeLock***](#settings) works for any music player.
 
+I could make a separate application for this purpose, but it would be waste of time that I can devote for this work.
+
+### For hi-res and DSD listeners
 This application switches iBasso DX200 audio processor (XMOS chip) into USB DAC mode, accessible for Android applications, installed on this DX200 itself! When **USB Audio for DX200** starts the USB DAC Interface, any compatible Android music player application, that supports and is configured to use a USB DAC, will play bit perfect audio, including DSD! For DSD, it supports both Native and DoP modes, and even DoP-encoded PCM formats, e.g. in flac.
 
 Don't like Mango, or it does not suit your needs? Just forget about it, and use other applications, fully utilizing the great hardware of DX200! The startup screen of **USB Audio for DX200** has listed compatible applications, along with the required settings.
@@ -42,7 +46,7 @@ They cover almost, if not all, file formats and sound sources around, and have r
 * ***Active player*** - choose the music player application that you currently use most of time, even if you have only one USB Audio compatible player. If there are more than one recognized players, the application hides other players (they are still installed, and their data is kept!), and, on USB device attached event, grants access to the USB device without questions and launches the player chosen. This eliminates possible conflicts and simplifies the use. If you want all your players back, select *I'll control it myself!* and tap OK.
 * ***Beep on USB Audio detached*** beeps if the USB interface has been detached, and the screen is turned off. It is useful to know that ***Idle timeout*** has been expired, and you need to turn screen on for a moment to continue listening.
 * ***Autostart*** - turn on to start the interface on application launch, without the need to push _Start_ button.
-* ***Current theme:*** allows you to choose from 6 Android standard themes for the application.
+* ***Current theme*** allows you to choose from 6 Android standard themes for the application.
 
 ***Active player*** lists the currently installed supported applications. The items marked with asterisk (\*) are visible. If you have an application you want to be supported, please let me know!
 
