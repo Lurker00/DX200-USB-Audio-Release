@@ -28,8 +28,11 @@ They cover almost, if not all, file formats and sound sources around, and have r
 **Warning:** Avoid having installed and configured for USB DAC playback more than one application at a time! They tend to autolaunch on a device attached, and you'll have a mess! If you want more than one USB Audio compatible music player, use ***Active player*** feature to avoid problems.
 
 ## Menu items
-* ***Settings*** - read the next chapter.
+* ***Settings*** - see below for details.
+* ***System settings*** - system wide settings and actions. See below for details.
 * ***USB DAC*** - turns DX200 into USB DAC mode. The Android interface is disabled while USB DAC mode is active.
+* ***Clear the log*** - clears the log screen.
+* ***Show ALSA state*** - displays information about currently played music format. This is the format that ALSA (Linux level sound driver) accepts and then sends to the DAC.
 * ***Exit*** - exits the application and removes its icon and bar from the notifications area.
 
 ## Settings
@@ -43,6 +46,8 @@ They cover almost, if not all, file formats and sound sources around, and have r
 * ***Hide MangoPlayer*** just hides MangoPlayer away from the desktop, like it is not installed. Recommended if you don't actually use it.
 
 ***Active player*** lists the currently installed supported applications. The items marked with asterisk (\*) are visible. If you have an application you want to be supported, please let me know!
+
+## System settings
 
 ## Indicator color
 The circle in the bottom right corner of the applciation icon in the notification bar reflects the current state:
