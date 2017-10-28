@@ -8,6 +8,10 @@
 1. [History of public releases](#history-of-public-releases)
 
 ## Introduction
+Starting from version **1.2.56**, this application became a system wide control center, meaning, useful for anybody:
+* ***System settings*** menu allows to stop Google/Android unwanted background activity, and to provide write access to SD-card for any application.
+* The application reliably detects music playback, and ***Smart release of WakeLock*** works for any music player.
+
 This application switches iBasso DX200 audio processor (XMOS chip) into USB DAC mode, accessible for Android applications, installed on this DX200 itself! When **USB Audio for DX200** starts the USB DAC Interface, any compatible Android music player application, that supports and is configured to use a USB DAC, will play bit perfect audio, including DSD! For DSD, it supports both Native and DoP modes, and even DoP-encoded PCM formats, e.g. in flac.
 
 Don't like Mango, or it does not suit your needs? Just forget about it, and use other applications, fully utilizing the great hardware of DX200! The startup screen of **USB Audio for DX200** has listed compatible applications, along with the required settings.
@@ -74,9 +78,10 @@ The circle in the bottom right corner of the applciation icon in the notificatio
 During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen with any other sample rate, including DSD. A workaround for 16/44.1 recordings is to use any player with playback via Android: it does not affect the quality ([the proof](https://github.com/Lurker00/DX200-firmware/blob/master/tools/README.md#tracks-to-test-bit-perfect-playback)). The best solution is to use [Neutron Music](https://play.google.com/store/apps/details?id=com.neutroncode.mp) with its Generic Driver (not with USB Audio!), because it is able to play bit perfect audio up to 24/192, including 24/44.1.
 
 ## History of public releases
-**1.1.56** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.5.141L2:
+**1.2.56** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.5.141L2:
 * Menu ***System settings*** accomodates system wide settings to minimize Android/Google background activity, leading to improved battery life in sleep mode and sound performance.
 * Menu ***Show ALSA state*** to display information about currently playing format.
+* Application look can be changed by choosing from 6 available themes.
 
 **1.1.48** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.5.141L1:
 * With ***Smart release of WakeLock*** turned on, when in idle state, USB Audio detects music playback in any application, and acquires its own wakelock to prevent Android from immediate sleep mode when the music is put on pause. The wakelock timeout is controlled by the same ***Idle Timeout*** value.
