@@ -9,7 +9,7 @@
 
 ## Introduction
 ### For everybody
-Starting from version **1.2.56**, this application became a system wide control center, meaning, useful for anybody:
+Starting from version **1.2.57**, this application became a system wide control center, meaning, useful for anybody:
 * [***System settings***](#system-settings) menu allows to stop Google/Android unwanted background activity, and to provide write access to SD-card for any application.
 * The application reliably detects music playback, and [***Smart release of WakeLock***](#settings) works for any music player.
 
@@ -52,12 +52,13 @@ They cover almost, if not all, file formats and sound sources around, and have r
 
 ## System settings
 For the best experience, it is recommended to turn these settings all green.
-* ***DSD/384kHz support for Neutron*** - turn it off only if this support creates conflicts with other applications (very unlikely).
-* ***Battery saver*** - turns on Android Battery Saver mode system wide. It does not actually save much battery, because the main consumers are DAC and amp. But it does reduce background activity of Android and Google stuff.
 * ***Hide MangoPlayer*** just hides MangoPlayer away from the desktop, like it is not installed. Recommended if you don't actually use it.
 * ***Disable Google services*** disables both Google services and Play Market, and eliminates their background activity. It backs up your Google account information, and restores it when this option is turned off.
 * ***Disable media scanner*** stops the media scanner, which scans all your files time to time. Turning this option off forces media re-scan, which is useful when you have added or deleted some files, and want to access them via MTP.
+* ***Battery saver*** - turns on Android Battery Saver mode system wide. It does not actually save much battery, because the main consumers are DAC and amp. But it does reduce background activity of Android and Google stuff, and other apps.<br />
+**Warning:** If you have disabled Google services, Android's battery saver may become the main battery drainer in device's idle state!
 * ***Disable system logs*** - turn this option off only if you need to collect system logs for investigation. Disabled by default, because it eliminates a lot of background work.
+* ***DSD/384kHz support for Neutron*** - turn it off only if this support creates conflicts with other applications (very unlikely).
 
 ### Actions
 * ***Collect system logs*** - push this button to collect system logs, e.g. to send to me for investigation. It creates files on the internal storage with names `syslogs0.tgz`, `syslogs1.tgz` etc. up to 5 in total, and `syslogs0.tgz` is always the most recent collection.
