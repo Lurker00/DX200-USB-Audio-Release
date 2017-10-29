@@ -51,12 +51,12 @@ They cover almost, if not all, file formats and sound sources around, and have r
 ***Active player*** lists the currently installed supported applications. The items marked with asterisk (\*) are visible. If you have an application you want to be supported, please let me know!
 
 ## System settings
-For the best experience, it is recommended to turn these settings all green.
+For the best experience, it is recommended to turn these settings all green, but ***Battery saver*** (see the warning!).
 * ***Hide MangoPlayer*** just hides MangoPlayer away from the desktop, like it is not installed. Recommended if you don't actually use it.
 * ***Disable Google services*** disables both Google services and Play Market, and eliminates their background activity. It backs up your Google account information, and restores it when this option is turned off.
 * ***Disable media scanner*** stops the media scanner, which scans all your files time to time. Turning this option off forces media re-scan, which is useful when you have added or deleted some files, and want to access them via MTP.
 * ***Battery saver*** - turns on Android Battery Saver mode system wide. It does not actually save much battery, because the main consumers are DAC and amp. But it does reduce background activity of Android and Google stuff, and other apps.<br />
-**Warning:** If you have disabled Google services, Android's battery saver may become the main battery drainer in device's idle state!
+**Warning:** If you have disabled Google services, Android's battery saver may become the main battery drainer in device's idle state! USB Audio application works around this misbehaviour, but only if it is running.
 * ***Disable system logs*** - turn this option off only if you need to collect system logs for investigation. Disabled by default, because it eliminates a lot of background work.
 * ***DSD/384kHz support for Neutron*** - turn it off only if this support creates conflicts with other applications (very unlikely).
 
