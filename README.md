@@ -67,7 +67,7 @@ With this option enabled, and ***Smart release of WakeLock*** active, USB Audio 
 * ***Grant SD card write access to all apps*** - Android in DX200 has broken the standard way to let the user grant write access to apps. This button grants it to all at once. If you have updated an app that needs write access, you have to push this buton again.
 
 ## Indicator color
-The circle in the bottom right corner of the applciation icon in the notification bar reflects the current state:
+The circle in the bottom right corner of the application icon in the notification bar reflects the current state:
 * Gray - idle state.
 * Green - the interface is active and ready to use.
 * Yellow - the interface is being restarted after a disconnect.
