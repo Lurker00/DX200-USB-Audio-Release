@@ -57,7 +57,7 @@ For the best experience, it is recommended to turn these settings all green.
 * ***Disable media scanner*** stops the media scanner, which scans all your files time to time. Turning this option off forces media re-scan, which is useful when you have added or deleted some files, and want to access them via MTP.
 * ***Battery saver*** - turns on Android Battery Saver mode system wide. It does not actually save much battery, because the main consumers are DAC and amp. But it does reduce background activity of Android and Google stuff, and other apps.
 * ***Hide MangoPlayer*** just hides MangoPlayer away from the desktop, like it is not installed. Recommended if you don't actually use it.
-* ***Disable system logs*** - turn this option off only if you need to collect system logs for investigation. Disabled by default, because it eliminates a lot of background work.
+* ***Disable system logs*** - turn this option off only if you need to collect system logs for investigation, or if disabling them creates problems, like for user interface of SuperSU. Disabled by default for 32-bit apps, because it eliminates a lot of background work.
 * ***DSD/384kHz support for Neutron*** - turn it off only if this support creates conflicts with other applications (very unlikely).
 
 ### Actions
@@ -98,7 +98,7 @@ The circle in the bottom right corner of the application icon in the notificatio
 During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen with any other sample rate, including DSD. A workaround for 16/44.1 recordings is to use any player with playback via Android: it does not affect the quality ([the proof](https://github.com/Lurker00/DX200-firmware/blob/master/tools/README.md#tracks-to-test-bit-perfect-playback)). The best solution is to use [Neutron Music](https://play.google.com/store/apps/details?id=com.neutroncode.mp) with its Generic Driver (not with USB Audio!), because it is able to play bit perfect audio up to 24/192, including 24/44.1.
 
 ## History of public releases
-**1.2.59** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.5.141L2:
+**1.2.59** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.7.188L0:
 * Menu ***System settings*** accomodates system wide settings to minimize Android/Google background activity, leading to improved battery life in sleep mode and sound performance.
 * Menu ***Show ALSA state*** to display information about currently playing format.
 * Application look can be changed by choosing from 6 available themes.
