@@ -62,7 +62,7 @@ For the best experience, it is recommended to turn these settings all green.
 
 ### Actions
 * ***Collect system logs*** - push this button to collect system logs, e.g. to send to me for investigation. It creates files on the internal storage with names `syslogs0.tgz`, `syslogs1.tgz` etc. up to 5 in total, and `syslogs0.tgz` is always the most recent collection.
-* ***Grant SD card write access to all apps*** - Android in DX200 has broken the standard way to let the user grant write access to apps. This button grants it to all at once. If you have updated an app that needs write access, you have to push this buton again.
+* ***Grant SD card write access to all apps*** - Android in DX200 has broken the standard way to let the user grant write access to apps. This button grants it to all at once. If you have updated an app that needs write access, you have to push this button again.
 
 ## Indicator color
 The circle in the bottom right corner of the application icon in the notification bar reflects the current state:
