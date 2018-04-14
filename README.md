@@ -43,12 +43,12 @@ They cover almost, if not all, file formats and sound sources around, and have r
 * ***Acquire WakeLock*** - prevents the device to go to sleep mode, while the interface is active. Without ***Smart release of WakeLock***, you have to stop the interface manually to let the device sleep.
 * ***Smart release of WakeLock*** - checks for music playback in a supported application, and releases the wakelock after ***Idle Timeout*** period of detected inactivity.
 * ***Idle Timeout*** - number of seconds of inactivity of a supported application, after which the wakelock is released.
-* ***Active player*** - choose the music player application that you currently use most of time, even if you have only one USB Audio compatible player. If there are more than one recognized players, the application hides other players (they are still installed, and their data is kept!), and, on USB device attached event, grants access to the USB device without questions and launches the player chosen. This eliminates possible conflicts and simplifies the use. If you want all your players back, select *I'll control it myself!* and tap OK.
+* ***Active player*** - choose the music player application that you currently use most of time, even if you have only one USB Audio compatible player. On USB device attached event, it grants access to the USB device without questions and launches the player chosen. This eliminates possible conflicts and simplifies the use. If you want to control access rights manually, select *I'll control it myself!* and tap OK.
 * ***Beep on USB Audio detached*** beeps if the USB interface has been detached, and the screen is turned off. It is useful to know that ***Idle timeout*** has been expired, and you need to turn screen on for a moment to continue listening.
 * ***Autostart*** - turn on to start the interface on application launch, without the need to push _Start_ button.
 * ***Current theme*** allows you to choose from 6 Android standard themes for the application.
 
-***Active player*** lists the currently installed supported applications. The items marked with asterisk (\*) are visible. If you have an application you want to be supported, please let me know!
+***Active player*** lists the currently installed supported applications. If you have an application you want to be supported, please let me know!
 
 ## System settings
 For the best experience, it is recommended to turn these settings all green.
@@ -98,6 +98,9 @@ The circle in the bottom right corner of the application icon in the notificatio
 During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen with any other sample rate, including DSD. A workaround for 16/44.1 recordings is to use any player with playback via Android: it does not affect the quality ([the proof](https://github.com/Lurker00/DX200-firmware/blob/master/tools/README.md#tracks-to-test-bit-perfect-playback)). The best solution is to use [Neutron Music](https://play.google.com/store/apps/details?id=com.neutroncode.mp) with its Generic Driver (not with USB Audio!), because it is able to play bit perfect audio up to 24/192, including 24/44.1.
 
 ## History of public releases
+**1.2.68** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.8.198L1:
+* It does not hide USB-capable music players, if an **Active player** was selected.
+
 **1.2.65** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.8.198L0:
 * Disabling Google Services also disables/enables YouTube amd Google Music applications, if they are installed. They won't work without GMS anyway, but wake up the device and drain battery.
 
