@@ -4,10 +4,13 @@
 1. [Settings](#settings)
 1. [Indicator color](#indicator-color)
 1. [FAQ](#faq)
-1. [Known problems](#known-problems)
+1. [Known problem on DX200 only](#known-problem-on-dx200-only)
 1. [History of public releases](#history-of-public-releases)
 
 ## Introduction
+
+Below, "DAP" means either DX200 or DX150, when the text is applicable to any of them.
+
 ### For everybody
 Starting from version **1.2.59**, this application became a system wide control center, meaning, useful for anybody:
 * [***System settings***](#system-settings) menu allows to stop Google/Android unwanted background activity, and to provide write access to SD-card for any application.
@@ -16,25 +19,25 @@ Starting from version **1.2.59**, this application became a system wide control 
 I could make a separate application for this purpose, but it would be waste of time that I can devote for this work.
 
 ### For hi-res and DSD listeners
-This application switches iBasso DX200 audio processor (XMOS chip) into USB DAC mode, accessible for Android applications, installed on this DX200 itself! When **USB Audio** starts the USB DAC Interface, any compatible Android music player application, that supports and is configured to use a USB DAC, will play bit perfect audio, including DSD! For DSD, it supports both Native and DoP modes, and even DoP-encoded PCM formats, e.g. in flac.
+This application switches iBasso DAP audio processor (XMOS chip) into USB DAC mode, accessible for Android applications, installed on this DX200 itself! When **USB Audio** starts the USB DAC Interface, any compatible Android music player application, that supports and is configured to use a USB DAC, will play bit perfect audio, including DSD! For DSD, it supports both Native and DoP modes, and even DoP-encoded PCM formats, e.g. in flac.
 
-Don't like Mango, or it does not suit your needs? Just forget about it, and use other applications, fully utilizing the great hardware of DX200! The startup screen of **USB Audio** has listed compatible applications, along with the required settings.
+Don't like Mango, or it does not suit your needs? Just forget about it, and use other applications, fully utilizing the great hardware of DAP! The startup screen of **USB Audio** has listed compatible applications, along with the required settings.
 
 Currently, there are 3 applications, fully compatible with USB Audio:
-* free [HibyMusic](https://play.google.com/store/apps/details?id=com.hiby.music) (a special build is embedded into firmware 2.2.110 Rev.2 and later),
+* free [HibyMusic](https://play.google.com/store/apps/details?id=com.hiby.music) (a special build is embedded into firmware),
 * [USB Audio Player PRO](https://play.google.com/store/apps/details?id=com.extreamsd.usbaudioplayerpro),
 * [Neutron Music](https://play.google.com/store/apps/details?id=com.neutroncode.mp).
 
 They cover almost, if not all, file formats and sound sources around, and have rich functionality.
 
-**Please note:** When Mango plays DSD tracks, it switches XMOS chip into USB DAC mode. Avoid playing DSD in Mango in Android, if you have configured UAPP/Hiby/Neutron to auto-start when USB DAC is attached! They will fight for the access to USB DAC with Mango.
+[Neutron Music](https://play.google.com/store/apps/details?id=com.neutroncode.mp) is fully functional on DAP alone, and does not require USB Audio. [USB Audio Player PRO](https://play.google.com/store/apps/details?id=com.extreamsd.usbaudioplayerpro) plays PCM up to 32/192 directly on DAP. For DSD and SACD playback you may still use USB Audio.
 
-**Warning:** Avoid having installed and configured for USB DAC playback more than one application at a time! They tend to autolaunch on a device attached, and you'll have a mess! If you want more than one USB Audio compatible music player, use ***Active player*** feature to avoid problems.
+**Please note:** When Mango plays DSD tracks, it switches XMOS chip into USB DAC mode. Avoid playing DSD in Mango in Android, if you have configured UAPP/Hiby/Neutron to auto-start when USB DAC is attached! They will fight for the access to USB DAC.
 
 ## Menu items
 * ***Settings*** - see [below for details](#settings).
 * ***System settings*** - system wide settings and actions. See [below for details](#system-settings).
-* ***USB DAC*** - turns DX200 into USB DAC mode. The Android interface is disabled while USB DAC mode is active.
+* ***USB DAC*** - turns DAP into USB DAC mode. The Android interface is disabled while USB DAC mode is active.
 * ***Clear the log*** - clears the log screen.
 * ***Show ALSA state*** - displays information about currently played music format. This is the format that ALSA (Linux level sound driver) accepts and then sends to the DAC.
 * ***Exit*** - exits the application and removes its icon and bar from the notifications area.
@@ -73,8 +76,8 @@ The circle in the bottom right corner of the application icon in the notificatio
 * Blue - idle state with music playback detected. The smart wakelock is active.
 
 ## FAQ
-**Q**: Is it safe to run DX200 in this mode?<br />
-**A**: Actually, Mango on both DX80 and DX200 uses this mode to playback DSD. So, yes - it is safe!
+**Q**: Is it safe to run DAP in this mode?<br />
+**A**: Actually, Mango on DAP (and even DX80!) uses this mode to playback DSD. So, yes - it is safe!
 
 **Q**: Do I need a special/custom firmware build, or a root access, or anything else special?<br />
 **A**: The basic functionality works with any stock firmware. Advanced features added in 1.0.24+ versions require it to be a part of the custom firmware.
@@ -85,21 +88,18 @@ The circle in the bottom right corner of the application icon in the notificatio
 **Q**: PCM formats sound OK, but with DSD I hear only a noise! What's wrong?<br />
 **A**: Check software volume control in your player application and be sure it is set to 100%.
 
-**Q**: Where is my internal storage in USB Mass Storage mode? The second disk is not inserted!<br />
-**A**: USB Mass Storage provides direct access to a real disk. The user visible internal storage is actually a folder of the internal disk (flash partition formatted with ext4). Though it is possible to export this whole partition, and ext4-aware OS (Linux) recognizes it, it has a little sense, because access rights keep the iternal storage directory out of reach anyway. Changing (accidentally or intentionally) these access rights will ruin DX200.
-
 **Q**: USB Audio looks like hung on starting the interface. Why?<br />
 **A**: Most probably an application plays music via Android, and keeps the interface from switching this way. Push Pause button to let USB Audio go.
 
 **Q**: PowerAmp Alpha has claimed to support USB DACs, but it does not produce any sound with USB Audio. Why?<br />
-**A**: Actually, PowerAmp build 703/704 does not support USB DACs directly. It relies on Android to route the sound to the DAC correctly. But in DX200, Android does not correctly route sound to USB Audio.
+**A**: Actually, PowerAmp build 703/704 does not support USB DACs directly. It relies on Android to route the sound to the DAC correctly. But in DAP, Android does not correctly route sound to USB Audio.
 
-## Known problems
+## Known problem on DX200 only
 During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen with any other sample rate, including DSD. A workaround for 16/44.1 recordings is to use any player with playback via Android: it does not affect the quality ([the proof](https://github.com/Lurker00/DX200-firmware/blob/master/tools/README.md#tracks-to-test-bit-perfect-playback)). The best solution is to use [Neutron Music](https://play.google.com/store/apps/details?id=com.neutroncode.mp) with its Generic Driver (not with USB Audio!), because it is able to play bit perfect audio up to 24/192, including 24/44.1.
 
 ## History of public releases
-**1.2.69** - only available in [custom firmware builds](https://github.com/Lurker00/DX150-firmware) starting from 2.9.250L0:
-* Support for iBasso DX150.
+**1.2.71** - only available in [custom firmware builds](https://github.com/Lurker00/DX150-firmware) starting from 2.9.275L2:
+* Full support for iBasso DX150.
 
 **1.2.68** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.8.198L1:
 * It does not hide USB-capable music players, if an **Active player** was selected.
