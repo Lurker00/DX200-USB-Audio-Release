@@ -78,13 +78,15 @@ The circle in the bottom right corner of the application icon in the notificatio
 ### HibyMusic by Lurker
 The old (2.3.4) versions of HibyMusic modified by me is a part of firmware for DAPs, with kind permission of the owner. It is 100% compatible and requires no additional settings. This is the default ***Active player***.
 
-### HibyMusic 3.0
+### HibyMusic 3.0.0
 HibyMusic has a problem with playback to a USB DAC: it does not acquire a wakelock to prevent Android sleep during playback. The workaround is to turn off ***Smart release of WakeLock*** option. Then, you shall manually STOP the interface in USB Audio to let your device go into sleep and prevent excessive battery drain.
 
 Required settings:
 * Exclusive HQ USB audio access: on
 * Lock USB Audio Vol: on
 * DSD Mode: Native
+
+The checked build is 5493. Other builds may have a different behavior.
 
 ### Neutron Music
 Neutron Music Player automatically detects DX200 and is able to play PCM up to 32/768KHz and DSD up to DSD512 bit perfect, without a need to use USB Audio application. [Read here for settings](https://github.com/Lurker00/DX200-firmware/blob/master/README.md#recommended-settings-for-neutron-music-player). To use with USB Audio, turn on *Direct USB Driver* in *Audio Hardware*.
