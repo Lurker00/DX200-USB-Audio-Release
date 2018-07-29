@@ -3,6 +3,7 @@
 1. [Menu items](#menu-items)
 1. [Settings](#settings)
 1. [Indicator color](#indicator-color)
+1. [Compatible applications](#compatible-applications)
 1. [FAQ](#faq)
 1. [Known problem on DX200 only](#known-problem-on-dx200-only)
 1. [History of public releases](#history-of-public-releases)
@@ -74,6 +75,18 @@ The circle in the bottom right corner of the application icon in the notificatio
 * Yellow - the interface is being restarted after a disconnect.
 * Red - the interface was disconnected and is about to be restarted.
 * Blue - idle state with music playback detected. The smart wakelock is active.
+
+## Compatible applications
+### HibyMusic by Lurker
+The old (2.3.4) versions of HibyMusic modified by me is a part of firmware for DAPs, with kind permission of the owner, is 100% compatible and require no additional settings. This is the default ***Active player***.
+
+### Neutron Music
+Neutron Music Player automatically detects DX200 and is able to play PCM up to 32/768KHz and DSD up to DSD512 bit perfect, without a need to use USB Audio application. [Read here for settings](https://github.com/Lurker00/DX200-firmware/blob/master/README.md#recommended-settings-for-neutron-music-player). To use with USB Audio, turn on **Direct USB Driver** in **Audio Hardware**.
+
+### USB Audio Player PRO
+Starting from version 4.1, UAPP can play bit perfect PCM up to 32/192kHz via its HiRes Direct Driver. [Read here for settings](https://github.com/Lurker00/DX200-firmware/blob/master/README.md#recommended-settings-for-usb-audio-player-pro) for both HiRes Direct Driver and USB Audio.
+
+*Note:* UAPP plays 1 second of silence on start, which causes USB Audio interface to disconnet. So, please first start UAPP, then push START button in USB Audio application.
 
 ## FAQ
 **Q**: Is it safe to run DAP in this mode?<br />
