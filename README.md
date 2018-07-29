@@ -20,7 +20,7 @@ Starting from version **1.2.59**, this application became a system wide control 
 I could make a separate application for this purpose, but it would be waste of time that I can devote for this work.
 
 ### For hi-res and DSD listeners
-This application switches iBasso DAP audio processor (XMOS chip) into USB DAC mode, accessible for Android applications, installed on this DX200 itself! When **USB Audio** starts the USB DAC Interface, any compatible Android music player application, that supports and is configured to use a USB DAC, will play bit perfect audio, including DSD! For DSD, it supports both Native and DoP modes, and even DoP-encoded PCM formats, e.g. in flac.
+This application switches iBasso DAP audio processor (XMOS chip) into USB DAC mode, accessible for Android applications, installed on this DAP itself! When **USB Audio** starts the internal USB DAC Interface, any compatible Android music player application, that supports and is configured to use a USB DAC, will play bit perfect audio, including DSD! For DSD, it supports both Native and DoP modes, and even DoP-encoded PCM formats, e.g. in flac.
 
 Don't like Mango, or it does not suit your needs? Just forget about it, and use other applications, fully utilizing the great hardware of DAP! The startup screen of **USB Audio** has listed compatible applications, along with the required settings.
 
@@ -29,9 +29,7 @@ Currently, there are 3 applications, fully compatible with USB Audio:
 * [USB Audio Player PRO](https://play.google.com/store/apps/details?id=com.extreamsd.usbaudioplayerpro),
 * [Neutron Music](https://play.google.com/store/apps/details?id=com.neutroncode.mp).
 
-They cover almost, if not all, file formats and sound sources around, and have rich functionality.
-
-[Neutron Music](https://play.google.com/store/apps/details?id=com.neutroncode.mp) is fully functional on DAP alone, and does not require USB Audio. [USB Audio Player PRO](https://play.google.com/store/apps/details?id=com.extreamsd.usbaudioplayerpro) plays PCM up to 32/192 directly on DAP. For DSD and SACD playback you may still use USB Audio.
+They cover almost, if not all, file formats and sound sources around, and have rich functionality. Read [here](#compatible-applications) for recommendations.
 
 **Please note:** When Mango plays DSD tracks, it switches XMOS chip into USB DAC mode. Avoid playing DSD in Mango in Android, if you have configured UAPP/Hiby/Neutron to auto-start when USB DAC is attached! They will fight for the access to USB DAC.
 
@@ -78,7 +76,7 @@ The circle in the bottom right corner of the application icon in the notificatio
 
 ## Compatible applications
 ### HibyMusic by Lurker
-The old (2.3.4) versions of HibyMusic modified by me is a part of firmware for DAPs, with kind permission of the owner. It is 100% compatible and require no additional settings. This is the default ***Active player***.
+The old (2.3.4) versions of HibyMusic modified by me is a part of firmware for DAPs, with kind permission of the owner. It is 100% compatible and requires no additional settings. This is the default ***Active player***.
 
 ### Neutron Music
 Neutron Music Player automatically detects DX200 and is able to play PCM up to 32/768KHz and DSD up to DSD512 bit perfect, without a need to use USB Audio application. [Read here for settings](https://github.com/Lurker00/DX200-firmware/blob/master/README.md#recommended-settings-for-neutron-music-player). To use with USB Audio, turn on *Direct USB Driver* in *Audio Hardware*.
@@ -86,7 +84,7 @@ Neutron Music Player automatically detects DX200 and is able to play PCM up to 3
 ### USB Audio Player PRO
 Starting from version 4.1, UAPP can play bit perfect PCM up to 32/192kHz via its HiRes Direct Driver. [Read here for settings](https://github.com/Lurker00/DX200-firmware/blob/master/README.md#recommended-settings-for-usb-audio-player-pro) for both HiRes Direct Driver and USB Audio.
 
-**Note:** UAPP plays 1 second of silence on start, which causes USB Audio interface to disconnet. So, please, first start UAPP, then push START button in USB Audio application.
+**Note:** UAPP plays 1 second of silence on start, which causes USB Audio interface to disconnect. So, please, first start UAPP, then push START button in USB Audio application.
 
 ## FAQ
 **Q**: Is it safe to run DAP in this mode?<br />
