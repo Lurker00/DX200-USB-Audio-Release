@@ -81,12 +81,12 @@ The circle in the bottom right corner of the application icon in the notificatio
 The old (2.3.4) versions of HibyMusic modified by me is a part of firmware for DAPs, with kind permission of the owner, is 100% compatible and require no additional settings. This is the default ***Active player***.
 
 ### Neutron Music
-Neutron Music Player automatically detects DX200 and is able to play PCM up to 32/768KHz and DSD up to DSD512 bit perfect, without a need to use USB Audio application. [Read here for settings](https://github.com/Lurker00/DX200-firmware/blob/master/README.md#recommended-settings-for-neutron-music-player). To use with USB Audio, turn on **Direct USB Driver** in **Audio Hardware**.
+Neutron Music Player automatically detects DX200 and is able to play PCM up to 32/768KHz and DSD up to DSD512 bit perfect, without a need to use USB Audio application. [Read here for settings](https://github.com/Lurker00/DX200-firmware/blob/master/README.md#recommended-settings-for-neutron-music-player). To use with USB Audio, turn on *Direct USB Driver* in *Audio Hardware*.
 
 ### USB Audio Player PRO
 Starting from version 4.1, UAPP can play bit perfect PCM up to 32/192kHz via its HiRes Direct Driver. [Read here for settings](https://github.com/Lurker00/DX200-firmware/blob/master/README.md#recommended-settings-for-usb-audio-player-pro) for both HiRes Direct Driver and USB Audio.
 
-*Note:* UAPP plays 1 second of silence on start, which causes USB Audio interface to disconnet. So, please first start UAPP, then push START button in USB Audio application.
+**Note:** UAPP plays 1 second of silence on start, which causes USB Audio interface to disconnet. So, please, first start UAPP, then push START button in USB Audio application.
 
 ## FAQ
 **Q**: Is it safe to run DAP in this mode?<br />
