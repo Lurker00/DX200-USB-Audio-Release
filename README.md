@@ -91,6 +91,7 @@ The checked build is 5493. Other builds may have a different behavior.
 Neutron Music Player automatically detects DAP and is able to play
 * PCM up to 32/768kHz and DSD up to DSD512 on DX200
 * PCM up to 32/384kHz and DSD up to DSD256 on DX150
+
 bit perfect, without a need to use USB Audio application. [Read here for settings](https://github.com/Lurker00/DX200-firmware/blob/master/README.md#recommended-settings-for-neutron-music-player). To use with USB Audio, turn on *Direct USB Driver* in *Audio Hardware*.
 
 ### USB Audio Player PRO
