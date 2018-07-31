@@ -1,4 +1,4 @@
-# USB Audio for DX200 and DX150
+# USB Audio for iBasso DX200 and DX150
 1. [Introduction](#introduction)
 1. [Menu items](#menu-items)
 1. [Settings](#settings)
@@ -53,18 +53,17 @@ They cover almost, if not all, file formats and sound sources around, and have r
 ***Active player*** lists the currently installed supported applications. If you have an application you want to be supported, please let me know!
 
 ## System settings
-For the best experience, it is recommended to turn these settings all green.
-* ***Enforce deep sleep*** - sets [Android's DeviceIdleController](https://android.googlesource.com/platform/frameworks/base/+/marshmallow-release/services/core/java/com/android/server/DeviceIdleController.java) parameters to values, optimized for average DAP usage, to minimize battery drain when DAP is not used.
-* ***Disable Google services*** disables both Google services and Play Market, and eliminates their background activity. It backs up your Google account information, and restores it when this option is turned off.
+For the best experience, it is recommended to turn at least 3 first settings green.
 * ***Disable media scanner*** stops the media scanner, which scans all your files time to time. Turning this option off forces media re-scan, which is useful when you have added or deleted some files, and want to access them via MTP.
+* ***Disable Google services*** disables both Google services and Play Market, and eliminates their background activity. It backs up your Google account information, and restores it when this option is turned off.
+* ***Enforce deep sleep*** - sets [Android's DeviceIdleController](https://android.googlesource.com/platform/frameworks/base/+/marshmallow-release/services/core/java/com/android/server/DeviceIdleController.java) parameters to values, optimized for average DAP usage, to minimize battery drain when DAP is not used. If Google Services are not disabled, they reset this setting time to time.
 * ***Battery saver*** - turns on Android Battery Saver mode system wide. It does not actually save much battery, because the main consumers are DAC and amp. But it does reduce background activity of Android and Google stuff, and other apps.
 * ***Hide MangoPlayer*** just hides MangoPlayer away from the desktop, like it is not installed. Recommended if you don't actually use it.
 * ***Disable system logs*** - turn this option off only if you need to collect system logs for investigation, or if disabling them creates problems, like for user interface of SuperSU. Disabled by default for 32-bit apps, because it eliminates a lot of background work.
-* ***DSD/384kHz support for Neutron*** - turn it off only if this support creates conflicts with other applications (very unlikely).
 
 ### Actions
 * ***Collect system logs*** - push this button to collect system logs, e.g. to send to me for investigation. It creates files on the internal storage with names `syslogs0.tgz`, `syslogs1.tgz` etc. up to 5 in total, and `syslogs0.tgz` is always the most recent collection.
-* ***Grant SD card write access to all apps*** - Android in DX200 has broken the standard way to let the user grant write access to apps. This button grants it to all at once. If you have updated an app that needs write access, you have to push this button again.
+* ***Grant SD card write access to all apps*** - Android in DAP has broken the standard way to let the user grant write access to apps. This button grants it to all at once. If you have updated an app that needs write access, you have to push this button again.
 
 ## Indicator color
 The circle in the bottom right corner of the application icon in the notification bar reflects the current state:
@@ -89,7 +88,10 @@ Required settings:
 The checked build is 5493. Other builds may have a different behavior.
 
 ### Neutron Music
-Neutron Music Player automatically detects DX200 and is able to play PCM up to 32/768KHz and DSD up to DSD512 bit perfect, without a need to use USB Audio application. [Read here for settings](https://github.com/Lurker00/DX200-firmware/blob/master/README.md#recommended-settings-for-neutron-music-player). To use with USB Audio, turn on *Direct USB Driver* in *Audio Hardware*.
+Neutron Music Player automatically detects DAP and is able to play
+* PCM up to 32/768kHz and DSD up to DSD512 on DX200
+* PCM up to 32/384kHz and DSD up to DSD256 on DX150
+bit perfect, without a need to use USB Audio application. [Read here for settings](https://github.com/Lurker00/DX200-firmware/blob/master/README.md#recommended-settings-for-neutron-music-player). To use with USB Audio, turn on *Direct USB Driver* in *Audio Hardware*.
 
 ### USB Audio Player PRO
 Starting from version 4.1, UAPP can play bit perfect PCM up to 32/192kHz via its HiRes Direct Driver. [Read here for settings](https://github.com/Lurker00/DX200-firmware/blob/master/README.md#recommended-settings-for-usb-audio-player-pro) for both HiRes Direct Driver and USB Audio.
@@ -119,7 +121,7 @@ Starting from version 4.1, UAPP can play bit perfect PCM up to 32/192kHz via its
 During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen with any other sample rate, including DSD. A workaround for 16/44.1 recordings is to use any player with playback via Android: it does not affect the quality ([the proof](https://github.com/Lurker00/DX200-firmware/blob/master/tools/README.md#tracks-to-test-bit-perfect-playback)). The best solution is to use [Neutron Music](https://play.google.com/store/apps/details?id=com.neutroncode.mp) or [USB Audio Player PRO](https://play.google.com/store/apps/details?id=com.extreamsd.usbaudioplayerpro), because they are able to play bit perfect audio directly.
 
 ## History of public releases
-**1.2.71** - only available in [custom firmware builds](https://github.com/Lurker00/DX150-firmware) starting from 2.9.275L2:
+**1.2.72** - only available in [custom firmware builds](https://github.com/Lurker00/DX150-firmware) starting from 2.9.275L2:
 * Full support for iBasso DX150.
 
 **1.2.68** - only available in [custom firmware builds](https://github.com/Lurker00/DX200-firmware) starting from 2.8.198L1:
