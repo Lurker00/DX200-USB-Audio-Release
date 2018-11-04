@@ -122,6 +122,9 @@ Starting from version 4.1, UAPP can play bit perfect PCM up to 32/192kHz via its
 During playback of tracks with 44.1KHz sampling rate, short cracking noise may appear time to time, with several seconds, or even minutes, in between. The reason is still unknown, and there is no a way to avoid it. It happens with all the players tested, and does not happen with any other sample rate, including DSD. A workaround for 16/44.1 recordings is to use any player with playback via Android: it does not affect the quality ([the proof](https://github.com/Lurker00/DX200-firmware/blob/master/tools/README.md#tracks-to-test-bit-perfect-playback)). The best solution is to use [Neutron Music](https://play.google.com/store/apps/details?id=com.neutroncode.mp) or [USB Audio Player PRO](https://play.google.com/store/apps/details?id=com.extreamsd.usbaudioplayerpro), because they are able to play bit perfect audio directly.
 
 ## History of public releases
+**1.2.77** - only available in [add-on for DX200 Android 8.1](https://github.com/Lurker00/DX200-Firmware-Add-on/releases):
+* USB DAC mode volume control for Android 8.1.
+
 **1.2.76** - only available in [add-on for DX200 Android 8.1](https://github.com/Lurker00/DX200-Firmware-Add-on/releases):
 * Partial support for Android 8.1.
 
