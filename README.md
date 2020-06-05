@@ -1,4 +1,4 @@
-# USB Audio for iBasso DX200 and DX150
+# USB Audio for iBasso DX200, DX150, DX160, DX220
 1. [Introduction](#introduction)
 1. [Menu items](#menu-items)
 1. [Settings](#settings)
@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Below, "DAP" means either DX200 or DX150, when the text is applicable to any of them.
+Below, "DAP" means a compatible iBasso DAP, when the text is applicable to any of them.
 
 ### For everybody
 Starting from version **1.2.59**, this application became a system wide control center, meaning, useful for anybody:
